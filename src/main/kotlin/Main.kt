@@ -1,24 +1,25 @@
-package com.joom.xxhash
+import com.appmattus.crypto.Algorithm
+import java.awt.Image
+import java.io.File
+import java.util.*
 
-import java.util.Random
+
 
 fun main(args: Array<String>) {
-    val random = Random()
-    val seed = if (random.nextBoolean()) random.nextLong() else null
-    println("Hello lok!")
-    val actualHash = XxHash64Hasher(seed).run {
-        hash.digest()
-    }
+    val bytes = File("src/main/resources/img.jpeg").readBytes()
+    val inputString2 = Base64.getEncoder().encodeToString(bytes)
 
-    val expectedHash = ByteArrayHasher().run {
-        if (seed == null) XxHash64.hashForArray(toByteArray()) else XxHash64.hashForArray(toByteArray(), seed)
-    }
+    val bufferedReader = File("src/base64.txt").bufferedReader()
+    val inputString = bufferedReader.use { it.readText() }
+    if (inputString != inputString2)
+        print("di=========")
+    val stringByteArray = inputString.encodeToByteArray()
+    val digest = Algorithm.XXHash64(0).createDigest()
+    val hash = digest.digest(stringByteArray)
+    hash.forEach {
 
-    if (expectedHash != actualHash) {
-        println("Expected $expectedHash, actual $actualHash, seed = $seed")
-    }
+        print(String.format("%02X", it))
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    }
+    print("done")
 }
