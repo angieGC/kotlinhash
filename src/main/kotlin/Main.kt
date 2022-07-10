@@ -45,6 +45,7 @@ fun main(args: Array<String>) {
 
     File("src/main/resources/file2.txt").writeText(arraylistHs.toString())
     val filename = "file2.txt"
+
     var fileObject = File(filename)
     var s = fileObject.absolutePath
     var fileExists = fileObject.exists()
