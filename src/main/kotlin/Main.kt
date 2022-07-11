@@ -9,8 +9,8 @@ fun main(args: Array<String>) {
 
     var arraylistHs = ArrayList<ArrayList<String>>()
     var arraylistN = ArrayList<String>()
-    //File("D:/Angie/universidad/2020/imagesdataset/VG_100K/").walk().forEach { it ->
-    File("D:/Angie/trabajoimagenes/org-img/impresas/").walk().forEach { it ->
+    File("D:/Angie/universidad/2020/imagesdataset/VG_100K/").walk().forEach { it ->
+    //File("D:/Angie/trabajoimagenes/org-img/impresas/").walk().forEach { it ->
         //println(it.extension + " is the extension of " + it.name)
         if (it.extension == "jpg")
         {
@@ -46,8 +46,8 @@ fun main(args: Array<String>) {
 
     }
 
-    File("src/main/resources/file1.txt").writeText(arraylistHs.toString())
-    File("src/main/resources/file11.txt").writeText(arraylistN.toString())
+    File("src/main/resources/file2.txt").writeText(arraylistHs.joinToString())
+    File("src/main/resources/file22.txt").writeText(arraylistN.joinToString())
     val filename = "file2.txt"
 
     var fileObject = File(filename)
