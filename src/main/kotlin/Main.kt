@@ -8,13 +8,16 @@ fun main(args: Array<String>) {
 
 
     var arraylistHs = ArrayList<ArrayList<String>>()
-    File("D:/Angie/universidad/2020/imagesdataset/VG_100K/").walk().forEach { it ->
+    var arraylistN = ArrayList<String>()
+    //File("D:/Angie/universidad/2020/imagesdataset/VG_100K/").walk().forEach { it ->
+    File("D:/Angie/trabajoimagenes/org-img/impresas/").walk().forEach { it ->
         //println(it.extension + " is the extension of " + it.name)
         if (it.extension == "jpg")
         {
             var arraylistB = ArrayList<String>()
             var arraylistH = ArrayList<String>()
             val bytes = File(it.path).readBytes()
+            arraylistN.add(it.name)
             val inputString = Base64.getEncoder().encodeToString(bytes)
             arraylistB.add(inputString)
             val stringByteArray = inputString.encodeToByteArray()
@@ -38,12 +41,13 @@ fun main(args: Array<String>) {
                 arraylistH.add(decimalString)
             }
             arraylistHs.add(arraylistH)
-            println(arraylistH)
+            //println(arraylistH)
         }
 
     }
 
-    File("src/main/resources/file2.txt").writeText(arraylistHs.toString())
+    File("src/main/resources/file1.txt").writeText(arraylistHs.toString())
+    File("src/main/resources/file11.txt").writeText(arraylistN.toString())
     val filename = "file2.txt"
 
     var fileObject = File(filename)
