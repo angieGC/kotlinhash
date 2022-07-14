@@ -1,4 +1,5 @@
 import com.appmattus.crypto.Algorithm
+import java.awt.Image
 import java.io.File
 import java.math.BigInteger
 import java.util.*
@@ -15,12 +16,14 @@ fun main(args: Array<String>) {
         //println(it.extension + " is the extension of " + it.name)
         if (it.extension == "png")
         {
-            var arraylistB = ArrayList<String>()
+
             var arraylistH = ArrayList<String>()
+            println(s)
             val bytes = File(it.path).readBytes()
             arraylistN.add(it.name)
             val inputString = Base64.getEncoder().encodeToString(bytes)
-            arraylistB.add(inputString)
+            var arraylistB=inputString
+            File("src/main/resources/file1111.txt").writeText(arraylistB)
             val stringByteArray = inputString.encodeToByteArray()
             val digest = Algorithm.XXHash64(0).createDigest()
             val hash = digest.digest(stringByteArray)
@@ -56,7 +59,7 @@ fun main(args: Array<String>) {
     }
 
     File("src/main/resources/file1.txt").writeText(arraylistHs.joinToString())
-    File("src/main/resources/file11.txt").writeText(arraylistN.joinToString())
+   // File("src/main/resources/file1111.txt").writeText(arraylistB.joinToString())
     val filename = "file3.txt"
 
     var fileObject = File(filename)
