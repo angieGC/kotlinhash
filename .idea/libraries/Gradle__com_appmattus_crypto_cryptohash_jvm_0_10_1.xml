@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.appmattus.crypto:cryptohash-jvm:0.10.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appmattus.crypto/cryptohash-jvm/0.10.1/d65f04080428824ae3f14ec9c6014554232a2c9b/cryptohash-jvm-0.10.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.appmattus.crypto/cryptohash-jvm/0.10.1/d6f64d57d130eb01bf0f656344f07a5ce423bea2/cryptohash-jvm-0.10.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,5 +1,8 @@
 import com.appmattus.crypto.Algorithm
-import java.awt.Image
+import org.opencv.core.Core
+import org.opencv.core.CvType
+import org.opencv.core.Mat
+import org.opencv.core.Scalar
 import java.io.File
 import java.math.BigInteger
 import java.util.*
@@ -77,5 +80,13 @@ fun main(args: Array<String>) {
     //val digest = Algorithm.XXHash64(0).createDigest()
     //val hash = digest.digest(stringByteArray)
 
-
+    System.loadLibrary(Core.NATIVE_LIBRARY_NAME)
+    println(Core.VERSION)
+    val mat = Mat(5, 10, CvType.CV_8UC1, Scalar(0.0))
+    println("OpenCV Mat: $mat")
+    val mr1 = mat.row(1)
+    mr1.setTo(Scalar(1.0))
+    val mc5 = mat.col(5)
+    mc5.setTo(Scalar(5.0))
+    println("OpenCv Mat Data: \n${mat.dump()}")
 }

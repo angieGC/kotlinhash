@@ -12,7 +12,11 @@ dependencies {
     implementation("org.lwjgl.osgi:org.lwjgl.xxhash:3.3.0")
     implementation("com.joom.xxhash:xxhash-android:1.2.0")
     implementation("com.appmattus.crypto:cryptohash:0.10.1")
+<<<<<<< HEAD
     implementation(files("D:/Angie/opencv/opencv-460.jar"))
+=======
+    implementation(files("D:/Momenry/OpenCv/opencv/build/java/opencv-460.jar"))
+>>>>>>> d50a761bda1cccad6c9481c6ae356106e17923f5
 }
 tasks.test {
     useJUnit()

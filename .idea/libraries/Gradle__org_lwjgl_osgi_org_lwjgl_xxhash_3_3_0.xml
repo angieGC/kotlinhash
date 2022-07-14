@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.lwjgl.osgi:org.lwjgl.xxhash:3.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl.osgi/org.lwjgl.xxhash/3.3.0/67489c15c6ca33f2298ab5118d8070f1f54a56ce/org.lwjgl.xxhash-3.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl.osgi/org.lwjgl.xxhash/3.3.0/44b24962145de53654667101e50b492f2ecc3aee/org.lwjgl.xxhash-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
